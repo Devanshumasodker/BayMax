@@ -4,12 +4,13 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import SplashScreen from '../screens/SplashScreen'
 import BaymaxScreen from '../screens/BaymaxScreen'
+import { navigationRef } from '../utils/NavigationUtils'
 
 
 const stack = createNativeStackNavigator()
 const Navigation:FC = () => {
   return (
-     <NavigationContainer>
+     <NavigationContainer ref={ navigationRef}>
          <stack.Navigator
          initialRouteName='SplashScreen'
             screenOptions={{

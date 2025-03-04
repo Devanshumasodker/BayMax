@@ -1,4 +1,4 @@
-import { screenWidth } from "./Scaling";
+import { screenWidth } from "../utils/Scaling"; // Update the path to the correct location of Scaling.tsx
 
 export enum Colors {
     primary = '#AF1125',
