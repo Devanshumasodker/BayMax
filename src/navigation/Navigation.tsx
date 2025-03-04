@@ -17,7 +17,10 @@ const Navigation:FC = () => {
                 headerShown: false
             }}
          >
-            <stack.Screen name="SplashScreen" component={SplashScreen} />
+            <stack.Screen name="SplashScreen" component={SplashScreen}
+            
+            />
+
             <stack.Screen name="BaymaxScreen" component={BaymaxScreen} />
          </stack.Navigator>
 
