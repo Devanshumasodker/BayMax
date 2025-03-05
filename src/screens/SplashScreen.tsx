@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image} from 'react-native'
 import React, { FC, use, useEffect } from 'react'
 import { TouchableOpacity } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useNavigationState } from '@react-navigation/native'
 import { navigate, resetAndNavigate } from '../utils/NavigationUtils'
 import { Colors, Fonts, lightColors } from '../utils/Constants'
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
@@ -30,7 +30,7 @@ baymaxAnimation.value = -screenHeight * 0.02
 
 setTimeout(() => {
 
-  resetAndNavigate('BaymaxScreen')
+  navigate('BaymaxScreen')
 }, 4000)
 
   }
@@ -38,7 +38,7 @@ setTimeout(() => {
   useEffect(() => {
     initiazeTTSListeners()
     launchAnimation()
-  }, [])
+  })
 
   
   const animateImageStyle = useAnimatedStyle( () => 

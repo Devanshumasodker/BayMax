@@ -17,7 +17,13 @@ const Navigation:FC = () => {
                 headerShown: false
             }}
          >
-            <stack.Screen name="SplashScreen" component={SplashScreen}
+            <stack.Screen name="SplashScreen"
+            options={
+               {
+                  animation: 'fade'
+               }
+            }
+            component={SplashScreen}
             
             />
 
